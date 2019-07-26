@@ -1,5 +1,6 @@
-<Query Kind="Statements">
-  <Namespace>System.Threading.Tasks</Namespace>
-</Query>
+<Query Kind="Statements" />
 
-Console.WriteLine(DateTime.Now);
+Console.WriteLine("Hello, World!");
+
+//< 0
+//| Hello, World!

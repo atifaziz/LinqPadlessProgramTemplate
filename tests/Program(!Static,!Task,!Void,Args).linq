@@ -1,15 +1,17 @@
-<Query Kind="Program">
-  <Namespace>System.Threading.Tasks</Namespace>
-</Query>
+<Query Kind="Program" />
 
 int Main(string[] args)
 {
     Console.WriteLine(GetType().FullName);
-    Console.WriteLine(Clock.Now);
+    Console.WriteLine(Greeting.Message);
     return args.Length;
 }
 
-static class Clock
+static class Greeting
 {
-    public static DateTime Now => DateTime.Now;
+    public static string Message => "Hello, World!";
 }
+
+//< 3
+//| UserQuery
+//| Hello, World!

@@ -1,13 +1,13 @@
-<Query Kind="Program">
-  <Namespace>System.Threading.Tasks</Namespace>
-</Query>
+<Query Kind="Program" />
 
 static void Main()
 {
-    Console.WriteLine(Clock.Now);
+    Console.WriteLine(Greeting.Message);
+}
+static class Greeting
+{
+    public static string Message => "Hello, World!";
 }
 
-static class Clock
-{
-    public static DateTime Now => DateTime.Now;
-}
+//< 0
+//| Hello, World!

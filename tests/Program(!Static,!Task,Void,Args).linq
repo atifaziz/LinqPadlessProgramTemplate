@@ -1,15 +1,18 @@
-<Query Kind="Program">
-  <Namespace>System.Threading.Tasks</Namespace>
-</Query>
+<Query Kind="Program" />
 
 void Main(string[] args)
 {
     Console.WriteLine(GetType().FullName);
-    Console.WriteLine(Clock.Now);
+    Console.WriteLine(Greeting.Message);
     Console.WriteLine(string.Join(",", args));
 }
 
-static class Clock
+static class Greeting
 {
-    public static DateTime Now => DateTime.Now;
+    public static string Message => "Hello, World!";
 }
+
+//< 0
+//| UserQuery
+//| Hello, World!
+//| foo,bar,baz

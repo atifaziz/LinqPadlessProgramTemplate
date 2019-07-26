@@ -4,10 +4,13 @@
 
 static async Task Main()
 {
-    Console.WriteLine(await Task.FromResult(Clock.Now));
+    Console.WriteLine(await Task.FromResult(Greeting.Message));
 }
 
-static class Clock
+static class Greeting
 {
-    public static DateTime Now => DateTime.Now;
+    public static string Message => "Hello, World!";
 }
+
+//< 0
+//| Hello, World!

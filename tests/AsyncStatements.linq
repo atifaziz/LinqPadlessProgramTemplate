@@ -2,4 +2,7 @@
   <Namespace>System.Threading.Tasks</Namespace>
 </Query>
 
-Console.WriteLine(await Task.FromResult(DateTime.Now));
+Console.WriteLine(await Task.FromResult("Hello, World!"));
+
+//< 0
+//| Hello, World!

@@ -1,3 +1,6 @@
 <Query Kind="Expression" />
 
-DateTime.Now
+"Hello, World!"
+
+//< 0
+//| Hello, World!

@@ -5,11 +5,16 @@
 async Task Main(string[] args)
 {
     Console.WriteLine(GetType().FullName);
-    Console.WriteLine(await Task.FromResult(Clock.Now));
+    Console.WriteLine(await Task.FromResult(Greeting.Message));
     Console.WriteLine(string.Join(",", args));
 }
 
-static class Clock
+static class Greeting
 {
-    public static DateTime Now => DateTime.Now;
+    public static string Message => "Hello, World!";
 }
+
+//< 0
+//| UserQuery
+//| Hello, World!
+//| foo,bar,baz
