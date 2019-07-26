@@ -113,21 +113,29 @@ partial class UserQuery
      // %}
 }
 // {% program-types %}
-#elif LINQPAD_EXPRESSION
-partial class UserQuery
-{
-    static async System.Threading.Tasks.Task Main() =>
-        System.Console.WriteLine(
-            // {% expression %}
-        );
-}
-#elif LINQPAD_STATEMENTS
+#elif LINQPAD_EXPRESSION || LINQPAD_STATEMENTS
 partial class UserQuery
 {
     static async System.Threading.Tasks.Task Main()
     {
+        await new UserQuery().RunUserAuthoredQuery();
+    }
+
+#if LINQPAD_EXPRESSION
+    async System.Threading.Tasks.Task RunUserAuthoredQuery()
+    {
+        System.Console.WriteLine(
+            // {% expression %}
+        );
+    }
+#elif LINQPAD_STATEMENTS
+    async System.Threading.Tasks.Task RunUserAuthoredQuery()
+    {
         // {% statements %}
     }
+#else
+#error Unsupported typeof LINQPad query
+#endif
 }
 #else
 #error Unsupported typeof LINQPad query
