@@ -110,6 +110,7 @@ partial class UserQuery
 #elif !STATIC && TASK && !VOID && ARGS
      async Task<int> RunUserAuthoredQuery(string[] args) =>
 #endif
+        throw new NotImplementedException();
      // %}
 }
 // {% program-types %}
