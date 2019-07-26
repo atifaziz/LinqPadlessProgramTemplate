@@ -10,10 +10,10 @@
 #if LINQPAD_PROGRAM_STATIC
 #define STATIC
 #endif
-#if LINQPAD_PROGRAM_TASK
+#if LINQPAD_PROGRAM_TASK || LINQPAD_STATEMENTS || LINQPAD_EXPRESSION
 #define TASK
 #endif
-#if LINQPAD_PROGRAM_VOID
+#if LINQPAD_PROGRAM_VOID || LINQPAD_STATEMENTS || LINQPAD_EXPRESSION
 #define VOID
 #endif
 #if LINQPAD_PROGRAM_ARGS
@@ -42,7 +42,6 @@ partial class UserQuery
         ;
 }
 
-#if LINQPAD_PROGRAM
 partial class UserQuery
 {
     static async System.Threading.Tasks.Task<int> Main(string[] args)
@@ -73,6 +72,8 @@ partial class UserQuery
 #endif // VOID
     }
 }
+
+#if LINQPAD_PROGRAM
 
 partial class UserQuery
 {
@@ -114,30 +115,29 @@ partial class UserQuery
      // %}
 }
 // {% program-types %}
-#elif LINQPAD_EXPRESSION || LINQPAD_STATEMENTS
+
+#elif LINQPAD_EXPRESSION
+
 partial class UserQuery
 {
-    static async System.Threading.Tasks.Task Main()
-    {
-        await new UserQuery().RunUserAuthoredQuery();
-    }
-
-#if LINQPAD_EXPRESSION
     async System.Threading.Tasks.Task RunUserAuthoredQuery()
     {
         System.Console.WriteLine(
             // {% expression %}
         );
     }
+}
+
 #elif LINQPAD_STATEMENTS
+
+partial class UserQuery
+{
     async System.Threading.Tasks.Task RunUserAuthoredQuery()
     {
         // {% statements %}
     }
-#else
-#error Unsupported typeof LINQPad query
-#endif
 }
+
 #else
 #error Unsupported typeof LINQPad query
 #endif
