@@ -17,9 +17,15 @@ public class TemplateTests
         Path.Join(TestDirectoryPath, "linq");
 
     public static readonly Lazy<string> LplessPath = new Lazy<string>(() =>
-        new DirectoryInfo(TestDirectoryPath).AncestorsAndSelf()
-            .Select(dir => Path.Join(dir.FullName, "lpless.cmd"))
-            .First(File.Exists));
+    {
+        var isWindows =    Environment.GetEnvironmentVariable("WINDIR") != null
+                        && Environment.GetEnvironmentVariable("COMSPEC") != null;
+
+        return new DirectoryInfo(TestDirectoryPath)
+            .AncestorsAndSelf()
+            .Select(dir => Path.Join(dir.FullName, "lpless" + (isWindows ? ".cmd" : ".sh")))
+            .First(File.Exists);
+    });
 
     readonly ITestOutputHelper _testOutput;
 
@@ -56,9 +62,15 @@ public class TemplateTests
             select m.Value.Trim();
 
         var cmd = Environment.GetEnvironmentVariable("COMSPEC");
+        var program = cmd ?? "/usr/bin/env";
+
+        var shargs = cmd != null ? new[] { "/c", "call" } : new[] { "bash" };
+
+        string[] Arguments(params string[] args) =>
+            shargs.Concat(args).ToArray();
 
         var (buildExitCode, result) =
-            Spawn(cmd, new[] { "/c", "call", LplessPath.Value, "-x", path },
+            Spawn(program, Arguments(LplessPath.Value, "-x", path),
                   s => "STDOUT: " + s,
                   s => "STDERR: " + s);
 
@@ -67,7 +79,7 @@ public class TemplateTests
         Assert.Equal(0, buildExitCode);
 
         var (exitCode, output) =
-            Spawn(cmd, "/c", "call", LplessPath.Value, path, "foo", "bar", "baz");
+            Spawn(program, Arguments(LplessPath.Value, path, "foo", "bar", "baz"));
 
         WriteLines(result);
 
