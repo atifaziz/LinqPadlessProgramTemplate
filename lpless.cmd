@@ -6,6 +6,6 @@ dotnet "%LPLESS%" %*
 goto :EOF
 
 :missing
-echo LINQPadless binary is missing.>&2
+echo LINQPadless executable is missing.>&2
 echo Build it by running: lpless\publish>&2
 goto :EOF
