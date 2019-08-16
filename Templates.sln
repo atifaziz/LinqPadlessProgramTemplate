@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".lpless", ".lpless", "{8E198010-A8B7-4F40-825C-73549238F526}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{EDB10C56-CBB6-4D8F-B291-870C3388E6F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template", ".lpless\templates\template\Template.csproj", "{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "tests\Tests.csproj", "{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0202C763-16E6-4AA9-93EA-2758B9DC3AEA}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		COPYING.txt = COPYING.txt
+		global.json = global.json
+		lpless.cmd = lpless.cmd
+		README.md = README.md
+		test.cmd = test.cmd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Debug|x64.Build.0 = Debug|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Debug|x86.Build.0 = Debug|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Release|x64.ActiveCfg = Release|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Release|x64.Build.0 = Release|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Release|x86.ActiveCfg = Release|Any CPU
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A}.Release|x86.Build.0 = Release|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Debug|x64.Build.0 = Debug|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Debug|x86.Build.0 = Debug|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Release|x64.ActiveCfg = Release|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Release|x64.Build.0 = Release|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Release|x86.ActiveCfg = Release|Any CPU
+		{B8F603B5-1ACD-48AA-A160-DC4A24815C3B}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EDB10C56-CBB6-4D8F-B291-870C3388E6F8} = {8E198010-A8B7-4F40-825C-73549238F526}
+		{B0EB5FE4-24A6-46C6-96EB-A35B5FAD8F7A} = {EDB10C56-CBB6-4D8F-B291-870C3388E6F8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D386E23A-774A-45D2-BB0F-8117C64A8A0A}
+	EndGlobalSection
+EndGlobal
