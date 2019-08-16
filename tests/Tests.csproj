@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -13,7 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="*.linq" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="linq\*.linq" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="linq\" />
   </ItemGroup>
 
 </Project>

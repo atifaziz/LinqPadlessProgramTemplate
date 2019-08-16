@@ -13,6 +13,9 @@ public class TemplateTests
     public static readonly string TestDirectoryPath =
         Path.GetDirectoryName(typeof(TemplateTests).Assembly.Location);
 
+    public static readonly string LinqDirectoryPath =
+        Path.Join(TestDirectoryPath, "linq");
+
     public static readonly Lazy<string> LplessPath = new Lazy<string>(() =>
         new DirectoryInfo(TestDirectoryPath).AncestorsAndSelf()
             .Select(dir => Path.Join(dir.FullName, "lpless.cmd"))
@@ -33,14 +36,14 @@ public class TemplateTests
     }
 
     public static readonly IEnumerable<object[]> TestSource =
-        from f in Directory.GetFiles(TestDirectoryPath, "*.linq")
+        from f in Directory.GetFiles(LinqDirectoryPath, "*.linq")
         select new object[] { Path.GetFileName(f) };
 
     [Theory]
     [MemberData(nameof(TestSource))]
     public void Test(string fileName)
     {
-        var path = Path.Combine(TestDirectoryPath, fileName);
+        var path = Path.Combine(LinqDirectoryPath, fileName);
         var content = File.ReadAllText(path);
 
         var expectedExitCode
