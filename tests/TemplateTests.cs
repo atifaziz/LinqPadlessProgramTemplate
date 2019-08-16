@@ -18,7 +18,7 @@ public class TemplateTests
             .Select(dir => Path.Join(dir.FullName, "lpless.cmd"))
             .First(File.Exists));
 
-    ITestOutputHelper _testOutput;
+    readonly ITestOutputHelper _testOutput;
 
     public TemplateTests(ITestOutputHelper output) =>
         _testOutput = output;
