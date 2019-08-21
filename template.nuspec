@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>LinqPadless.Templates.Template</id>
+    <version>1.0.0$VersionSuffix$</version>
+    <title>LINQPadless Program Template</title>
+    <authors>Atif Aziz</authors>
+    <owners>Atif Aziz</owners>
+    <copyright>Copyright &#169; 2017 Atif Aziz. All rights reserved.</copyright>
+    <license type="expression">MIT</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Template project for turning LINQPad queries into runnable .NET Core programs using LINQPadless.</description>
+  </metadata>
+  <files>
+    <file src=".lpless\templates\template\*.cs" target="content\.lpless\templates\template" />
+    <file src=".lpless\templates\template\*.csproj" target="content\.lpless\templates\template" />
+    <file src=".lpless\templates\template\global.json" target="content\.lpless\templates\template" />
+  </files>
+</package>
