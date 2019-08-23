@@ -4,4 +4,5 @@ cd "$(dirname "$0")"
 if [[ ! -f lpless/dist/bin/lpless.dll ]]; then
     lpless/publish.sh
 fi
-dotnet test tests
+dotnet build tests
+dotnet test --no-restore --no-build tests "$@"
