@@ -1,4 +1,4 @@
 [submodule "lpless"]
 	path = lpless
-	url = https://github.com/linqpadless/LinqPadless.git
+	url = https://github.com/atifaziz/LinqPadless.git
 	branch = master
