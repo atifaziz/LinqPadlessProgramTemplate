@@ -115,6 +115,7 @@ partial class UserQuery
      // %}
 }
 // {% program-types %}
+// {% program-namespaces %}
 
 #elif LINQPAD_EXPRESSION
 
