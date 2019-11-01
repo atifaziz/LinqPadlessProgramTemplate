@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <None Include="linq\*.linq" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="linq\lib\*.linq" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>
